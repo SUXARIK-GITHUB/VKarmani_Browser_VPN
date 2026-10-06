@@ -1,0 +1,47 @@
+VKarmani Browser VPN v0.4.0-one-folder
+Build UTC: 2026-10-06T00:13:57Z
+
+SCOPE
+- Chromium MV3 extension for Chrome / Edge / Brave / Opera / Chromium-family browsers
+- Windows x64 native helper built and packaged inside the same extension folder
+- One-click user setup: extension/00_INSTALL_VKARMANI.cmd
+- User does not manually install Hiddify, v2rayN, Xray, WARP or sing-box
+- Setup obtains pinned sing-box 1.14.1 automatically and verifies official release SHA256 before extraction/install
+- Core download fallback chain: GitHub official -> SourceForge exact mirror -> ghproxy.net -> ghfast.top -> gh-proxy.com
+- Download mirrors are transport only; exact SHA256 is the trust gate
+- No Remnawave/TECH/brown-bear/node mutation performed
+
+CHECKS PERFORMED
+GO_TEST=PASS
+GO_VET=PASS
+WINDOWS_AMD64_CROSS_BUILD=PASS
+LINUX_AMD64_BUILD=PASS
+NODE_BACKGROUND_JS_SYNTAX=PASS
+NODE_POPUP_JS_SYNTAX=PASS
+MANIFEST_JSON=PASS
+BOOTSTRAP_JSON=PASS
+EXTENSION_ID_DERIVATION=PASS
+PACKAGED_HELPER_HASH_BINDING=PASS
+PACKAGED_BOOTSTRAP_HASH_BINDING=PASS
+COUNTRY_FLAG_COUNT_249=PASS
+SERVER_TECHNICAL_ENDPOINT_HIDDEN_AUDIT=PASS
+CHROMESETTING_BINDING_REGRESSION_AUDIT=PASS
+CHROMIUM_HEADLESS_UNPACKED_EXTENSION_LOAD_SMOKE=PASS
+
+PINNED COMPONENTS
+EXTENSION_ID=bfcnangfjclakpliejpaamnalnjbmlgh
+WINDOWS_HELPER_SHA256=75bc3f9ee22a53f260f8877a9160efb3687e0d8014c799c35a4cb1d4ccefda9a
+BOOTSTRAP_SHA256=d5c5b075bed904a4604a8097811881d3fc86078bd24efe20c6065497af450ab2
+SING_BOX_VERSION=1.14.1
+SING_BOX_WINDOWS_AMD64_ZIP_SHA256=5197f16d492d93202dc623622149a6ed040f8eca263128f91d603f2b901baa89
+
+NOT VERIFIED IN THIS BUILD ENVIRONMENT
+- Real Windows PowerShell setup execution (PowerShell runtime unavailable in Linux build container)
+- Live download through GitHub/SourceForge/third-party mirrors (build container has no outbound DNS)
+- Real Chrome/Opera Native Messaging integration on Windows
+- Real production Remnawave subscription fetch (no user secret supplied)
+- Real VLESS/REALITY data-plane through a production node (no user secret supplied)
+- Code signing / Chrome Web Store distribution
+
+IMPORTANT BROWSER BOUNDARY
+A normal unpacked Chromium extension cannot register its own Native Messaging host or silently self-install. Therefore one local double-click of 00_INSTALL_VKARMANI.cmd plus the browser's Load unpacked action is the minimum safe/manual bootstrap for this architecture.

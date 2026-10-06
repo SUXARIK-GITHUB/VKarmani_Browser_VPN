@@ -1,0 +1,45 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.*
+secrets.*
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.cache
+.tmp/
+tmp/
+
+# Go local build/test artifacts
+native-helper/vkarmani-browser-helper
+native-helper/vkarmani-browser-helper.exe
+coverage.out
+
+# Locally downloaded VPN core / archives
+sing-box.exe
+sing-box-*.zip
+sing-box-*.tar.gz
+
+# Generated unpack directories
+build/
+out/
