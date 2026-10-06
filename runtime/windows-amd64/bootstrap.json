@@ -1,0 +1,18 @@
+{
+  "subscription_host": "sub.vkarmani.com",
+  "direct_ips": [
+    "81.163.22.205",
+    "80.66.81.68"
+  ],
+  "allowed_server_suffixes": [
+    ".vkarmani.com"
+  ],
+  "allowed_server_ports": [
+    443,
+    9443
+  ],
+  "max_subscription_bytes": 1048576,
+  "public_relay_prefixes": [
+    "https://proxy.cors.dev/"
+  ]
+}

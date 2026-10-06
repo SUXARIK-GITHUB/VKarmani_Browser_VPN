@@ -1,0 +1,19 @@
+VKarmani Browser VPN 0.4.0 — ONE-FOLDER WINDOWS X64
+Build UTC: 2026-10-06T00:13:57Z
+Extension ID: bfcnangfjclakpliejpaamnalnjbmlgh
+Helper SHA256: 75bc3f9ee22a53f260f8877a9160efb3687e0d8014c799c35a4cb1d4ccefda9a
+Bootstrap SHA256: d5c5b075bed904a4604a8097811881d3fc86078bd24efe20c6065497af450ab2
+Pinned sing-box: 1.14.1 windows-amd64
+Pinned upstream sing-box ZIP SHA256: 5197f16d492d93202dc623622149a6ed040f8eca263128f91d603f2b901baa89
+
+User flow:
+1) Extract this single folder.
+2) Double-click 00_INSTALL_VKARMANI.cmd once.
+3) Browser -> Developer mode -> Load unpacked -> select this same folder.
+4) Paste user Remnawave subscription and connect.
+
+No separate Hiddify/v2rayN/Xray/WARP/sing-box installation is required.
+The setup automatically obtains sing-box and rejects any bytes whose SHA256 differs from the pinned upstream release digest.
+
+Build-environment checks: Go tests PASS; Go vet PASS; Windows helper cross-build PASS; JS syntax PASS; manifest/bootstrap JSON PASS; fixed extension-ID derivation PASS; packaged helper/bootstrap hash binding PASS; 249 local flags PASS; ChromeSetting binding regression audit PASS; Chromium unpacked-extension load smoke PASS.
+Not verified here: execution of the Windows PowerShell setup itself; live download through each fallback provider; real Remnawave/VLESS/REALITY E2E on a Windows workstation.

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "VKarmani Browser VPN",
+  "version": "0.4.0",
+  "description": "Browser-only VKarmani VPN for Remnawave VLESS/REALITY subscriptions.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApefRNoy7fTnOeOFnW7Xe859sYP8Ay8g9b2D4k85mP1AgRguB1MbtvvD8nAo2O271qzlO2t5IUqS8qq3v6YN2bnuP8C5OBV8HTXWgUpA+nGK+sNdbOIysPnzc5AZJIUp+Gt249jzFT93JQ6AKzvuPkuNvVVYFJ44Tyz3Usk/yoadkUHILqN2Tg+MCwrP+YNFgRwkk3Qt1ELKOmKIRnZArPonOUFhJURC1O3Tw+FC0vKeUczxLi0yOt4ra9YcNF97dv9CYI7nLz9HUCloMAqI6nQxqvKBEao9/d+rZpC8rtVUWm5GRlyU967LNjtKxwRMNNmL99FCvTFoXna26sAhQbQIDAQAB",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "alarms",
+    "nativeMessaging",
+    "privacy",
+    "proxy",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "VKarmani Browser VPN",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

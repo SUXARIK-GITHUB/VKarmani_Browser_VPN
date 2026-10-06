@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VKarmani Browser VPN</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="https://www.vkarmani.com/" target="_blank" rel="noreferrer" aria-label="Открыть сайт VKarmani">
+        <img class="brand-logo" src="icons/icon128.png" alt="">
+        <div class="brand-copy">
+          <strong>VKarmani</strong>
+          <span>Browser VPN</span>
+        </div>
+      </a>
+      <span id="statePill" class="status-chip status-off"><span class="status-dot"></span>Отключено</span>
+    </header>
+
+    <section id="errorBox" class="notice notice-error hidden"></section>
+    <section id="warningBox" class="notice notice-warning hidden"></section>
+
+    <section id="setupCard" class="setup hidden">
+      <div class="setup-hero panel">
+        <div class="setup-badge">VPN только для браузера</div>
+        <h1>Подключите VKarmani</h1>
+        <p>Вставьте ссылку, которую вы получили в боте — доступные локации появятся автоматически.</p>
+        <div class="setup-links">
+          <a class="button button-secondary" href="https://www.vkarmani.com/" target="_blank" rel="noreferrer">Наш сайт</a>
+          <a class="button button-telegram" href="https://t.me/vkarmani_bot" target="_blank" rel="noreferrer">Telegram-бот</a>
+        </div>
+      </div>
+
+      <div class="panel subscription-entry">
+        <div class="section-kicker">Ссылка подписки</div>
+        <label for="subscriptionInput">Ссылка подписки</label>
+        <div class="input-shell">
+          <input id="subscriptionInput" type="password" autocomplete="off" spellcheck="false" placeholder="https://sub.vkarmani.com/…">
+        </div>
+        <button id="saveSubscription" class="button button-primary button-full">Продолжить</button>
+        <p class="privacy-note">Ссылка не сохраняется в браузере. Helper сначала использует прямые защищённые маршруты; если они заблокированы, только для загрузки подписки включается резервный публичный relay.</p>
+      </div>
+    </section>
+
+    <section id="mainCard" class="main-view hidden">
+      <section class="connection-card panel">
+        <div class="connection-head">
+          <div>
+            <div class="section-kicker">Защита браузера</div>
+            <div id="connectionTitle" class="connection-title">Не подключено</div>
+          </div>
+          <div id="heroFlag" class="hero-flag flag-shell flag-placeholder" aria-hidden="true">
+            <span>VK</span>
+          </div>
+        </div>
+        <div id="connectionSubtitle" class="connection-subtitle">Выберите сервер или подключитесь автоматически.</div>
+        <button id="autoBtn" class="button button-primary button-full connect-button">Подключиться</button>
+        <button id="disconnectBtn" class="button button-danger button-full connect-button hidden">Отключиться</button>
+      </section>
+
+      <section class="locations-section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Локации</div>
+            <h2>Серверы</h2>
+          </div>
+          <div class="section-actions">
+            <button id="probeBtn" class="icon-button" title="Проверить задержку" aria-label="Проверить задержку">⌁</button>
+            <button id="refreshBtn" class="icon-button" title="Обновить подписку" aria-label="Обновить подписку">↻</button>
+          </div>
+        </div>
+        <div id="serverList" class="server-list"></div>
+      </section>
+
+      <details class="account-panel panel">
+        <summary>
+          <span>
+            <span class="section-kicker">Подписка</span>
+            <span id="maskedSubscription" class="subscription-mask">Сохранена</span>
+          </span>
+          <span class="summary-chevron">›</span>
+        </summary>
+        <div class="account-content">
+          <div id="lastUpdate" class="meta-line"></div>
+          <div id="helperInfo" class="meta-line"></div>
+          <div class="account-actions">
+            <button id="changeSubscriptionBtn" class="button button-secondary button-full">Заменить подписку</button>
+            <button id="clearSubscriptionBtn" class="button button-ghost-danger button-full">Удалить подписку</button>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <a href="https://www.vkarmani.com/" target="_blank" rel="noreferrer">vkarmani.com</a>
+      <span>•</span>
+      <a href="https://t.me/vkarmani_bot" target="_blank" rel="noreferrer">@vkarmani_bot</a>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
